@@ -24,16 +24,15 @@ def identificar_screenshot_size():
     p_ou_t=listen()
     match p_ou_t:
         case "total":
-            tts_say("A tirar screenshot")
             screenshot_total()
         case "parcial":
             tts_say("Quantos pixels tem horizontalmente?")
             pixh=listen()
             tts_say("Quantos pixels tem verticalmente?")
             pixv=listen()
-            tts_say("Onde é horizontalmente o pixel do canto superior esquerdo?")
+            tts_say("Onde é horizontalmente o pixel do canto superior esquerdo do screenshot?")
             pixoh = listen()
-            tts_say("Onde é vertocalmente o pixel do canto superior esquerdo?")
+            tts_say("Onde é vertocalmente o pixel do canto superior esquerdo do screenshot?")
             pixov = listen()
 
             screenshot_parcial(pixh,pixv,pixoh,pixov)
@@ -42,6 +41,7 @@ def identificar_screenshot_name():
     tts_say("Como se chama este screenshot?")
     nome_scr=listen()
     return nome_scr
+
 
 
 
