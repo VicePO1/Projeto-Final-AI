@@ -38,6 +38,12 @@ def identificar_screenshot_size():
 
             screenshot_parcial(pixh,pixv,pixoh,pixov)
 
+def identificar_screenshot_name():
+    tts_say("Como se chama este screenshot?")
+    nome_scr=listen()
+    return nome_scr
+
+
 
 
 
