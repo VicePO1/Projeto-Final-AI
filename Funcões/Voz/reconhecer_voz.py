@@ -1,15 +1,10 @@
-import speech_recognition as sr
-from tts import tts_say
-from Funcões.automation import *
+from tkinter.filedialog import askopenfilename
+from Funcões.Automation.files_open import kit
+from Funcões.Imagens.extração import ler_imagem
+from Funcões.Automation.screenshots import *
+from Funcões.Voz.tts import tts_say
+from utils import listen
 
-def listen():
-    rec = sr.Recognizer()
-    with sr.Microphone() as mic:
-       rec.adjust_for_ambient_noise(mic)
-       print('Fale algo e aguarde ...')
-       audio = rec.listen(mic)
-       texto = rec.recognize_google(audio, language="pt-BR")
-       return texto
 
 def identificar_inicial(texto):
     match texto:
@@ -18,6 +13,12 @@ def identificar_inicial(texto):
             kit()
         case "screenshot":
             identificar_screenshot_size()
+        case "ler imagem":
+            tts_say("Qual é a imagem")
+            filename=askopenfilename()
+            tts_say("Onde está o tesseract")
+            tesseract= askopenfilename()
+            ler_imagem(filename,tesseract)
 
 def identificar_screenshot_size():
     tts_say("O screenshot é parcial ou total?")
@@ -41,6 +42,8 @@ def identificar_screenshot_name():
     tts_say("Como se chama este screenshot?")
     nome_scr=listen()
     return nome_scr
+
+
 
 
 

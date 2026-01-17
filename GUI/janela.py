@@ -1,5 +1,6 @@
 import tkinter as tk
 from GUI.labels import *
+from GUI.buttons import *
 
 def janela_inicial():
    root=tk.Tk()
@@ -9,6 +10,7 @@ def janela_inicial():
 
    shark_art()
    título()
+   button_listen()
    root.mainloop()
 
 

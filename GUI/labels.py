@@ -1,10 +1,10 @@
 import tkinter as tk
 
-with open("shark.txt","r") as file:
+with open("../Assets/shark.txt", "r") as file:
     sharkart=file.read()
 
 def título():
-    titulo=tk.Label(text="Assistente Sharkcoders",bg="light Blue",font=("Arial",15))
+    titulo=tk.Label(text="Assistente Sharkcoders",bg="light Blue",font=("Georgia",18))
     titulo.place(x=85,y=30)
 
 def shark_art():
