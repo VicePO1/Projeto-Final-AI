@@ -1,0 +1,27 @@
+# SharkCoders Assistant - Dependências
+# Interface Gráfica (tkinter vem com Python)
+
+# Reconhecimento de Voz
+SpeechRecognition>=3.10.0
+PyAudio>=0.2.13
+
+# Síntese de Voz
+pyttsx3>=2.90
+
+# Automação
+PyAutoGUI>=0.9.54
+
+# Processamento de Imagem
+Pillow>=10.0.0
+opencv-python>=4.8.0
+
+# OCR
+pytesseract>=0.3.10
+
+# API e Comunicação
+Flask>=3.0.0
+requests>=2.31.0
+python-telegram-bot>=20.0
+
+# Utilitários
+python-dotenv>=1.0.0
