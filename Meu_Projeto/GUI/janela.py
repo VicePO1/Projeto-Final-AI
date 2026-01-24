@@ -1,8 +1,9 @@
 import tkinter as tk
 
-from Meu_Projeto.GUI.entries import entry_screenshot_size
+from Meu_Projeto.GUI.entries import create_entry_screenshot_size
 from Meu_Projeto.GUI.labels import *
 from Meu_Projeto.GUI.buttons import *
+
 
 def janela_inicial():
    root=tk.Tk()
@@ -12,8 +13,7 @@ def janela_inicial():
 
    shark_art()
    título()
-   button_listen()
-   entry_screenshot_size()
+   create_button_listen()
 
    root.mainloop()
 

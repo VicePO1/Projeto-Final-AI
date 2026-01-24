@@ -3,6 +3,7 @@ from speech_recognition import UnknownValueError
 
 
 def listen():
+
     rec = sr.Recognizer()
     with sr.Microphone() as mic:
        rec.adjust_for_ambient_noise(mic)

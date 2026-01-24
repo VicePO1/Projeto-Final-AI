@@ -1,6 +1,8 @@
 import tkinter as tk
+import os
 
-with open("../Assets/shark.txt", "r") as file:
+user=os.getlogin()
+with open(fr"C:\Users\{user}\Desktop\GitHub\Projeto-Final-AI\Meu_Projeto\Assets\shark.txt", "r") as file:
     sharkart=file.read()
 
 def título():
@@ -10,6 +12,13 @@ def título():
 def shark_art():
     shark_label=tk.Label(text=sharkart,bg="light Blue",font=("Courier",2))
     shark_label.place(x=225,y=230)
+
+def label_entry_screenshot_size():
+    label_screenshot_size=tk.Label(text="Escreva aqui:",bg="light Blue")
+    label_screenshot_size.place(x=50,y=270)
+
+
+
 
 
 
