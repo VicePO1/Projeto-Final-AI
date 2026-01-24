@@ -1,9 +1,9 @@
 from tkinter.filedialog import askopenfilename
-from Funcões.Automation.files_open import kit
-from Funcões.Imagens.extração import ler_imagem
-from Funcões.Automation.screenshots import *
-from Funcões.Voz.tts import tts_say
-from Utils.utils import listen
+from Meu_Projeto.Automation.files_open import kit
+from Meu_Projeto.Imagens.extração import ler_imagem
+from Meu_Projeto.Automation.screenshots import *
+from Meu_Projeto.Voz.tts import tts_say
+from Meu_Projeto.Utils.utils import listen
 
 
 def identificar_inicial(texto):

@@ -1,6 +1,6 @@
-from Funcões.Voz.tts import tts_say
+from Meu_Projeto.Voz.tts import tts_say
 import pyautogui
-from Utils.utils import listen
+from Meu_Projeto.Utils.utils import listen
 
 def screenshot_total():
     scr=pyautogui.screenshot()

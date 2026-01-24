@@ -1,4 +1,4 @@
-from Funcões.Voz.tts import tts_say
+from Meu_Projeto.Voz.tts import tts_say
 import os
 
 def kit():
