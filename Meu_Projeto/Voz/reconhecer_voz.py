@@ -19,6 +19,9 @@ def identificar_inicial(texto):
             tts_say("Onde está o tesseract")
             tesseract= askopenfilename()
             ler_imagem(filename,tesseract)
+        case _ :
+            tts_say("Não percebi")
+
 
 
 
