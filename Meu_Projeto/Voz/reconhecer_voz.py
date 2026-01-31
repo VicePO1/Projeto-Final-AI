@@ -3,7 +3,7 @@ from Meu_Projeto.Automation.files_open import kit
 from Meu_Projeto.Imagens.extração import ler_imagem
 from Meu_Projeto.Automation.screenshots import *
 from Meu_Projeto.Voz.tts import tts_say
-from Meu_Projeto.Utils.utils import listen
+from Meu_Projeto.GUI.labels import create_label_ler_imagem
 
 
 def identificar_inicial(texto):
@@ -18,10 +18,9 @@ def identificar_inicial(texto):
             filename=askopenfilename()
             tts_say("Onde está o tesseract")
             tesseract= askopenfilename()
-            ler_imagem(filename,tesseract)
+            create_label_ler_imagem(ler_imagem(filename,tesseract))
         case _ :
             tts_say("Não percebi")
-
 
 
 

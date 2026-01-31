@@ -10,5 +10,3 @@ def create_entry_screenshot_size():
 def get_entry_screenshot_size():
     screenshot_size=entry_screenshot_size.get()
     return screenshot_size
-
-

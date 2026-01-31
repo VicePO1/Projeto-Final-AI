@@ -9,10 +9,10 @@ def janela_inicial():
    root=tk.Tk()
    root.configure(bg='lightblue')
    root.wm_resizable(False, False)
-   root.wm_geometry("400x400")
+   root.wm_geometry("500x500")
 
    shark_art()
-   título()
+   create_titulo()
    create_button_listen(root)
 
    root.mainloop()
