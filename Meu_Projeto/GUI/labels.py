@@ -11,7 +11,7 @@ def create_titulo():
 
 def shark_art():
     shark_label=tk.Label(text=sharkart,bg="light Blue",font=("Courier",2))
-    shark_label.place(x=255,y=280)
+    shark_label.place(x=275,y=280)
 
 def label_entry_screenshot_size():
     label_screenshot_size=tk.Label(text="Escreva aqui:",bg="light Blue")

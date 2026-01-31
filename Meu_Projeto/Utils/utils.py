@@ -13,6 +13,5 @@ def listen():
            rec.adjust_for_ambient_noise(mic,duration=1)
            texto = rec.recognize_google(audio, language="pt-BR")
        except UnknownValueError:
-           texto="google is dumb"
-       print(texto)
+           texto=""
        return texto

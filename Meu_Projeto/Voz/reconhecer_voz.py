@@ -19,10 +19,10 @@ def identificar_inicial(texto):
             tts_say("Onde está o tesseract")
             tesseract= askopenfilename()
             create_label_ler_imagem(ler_imagem(filename,tesseract))
+        case "":
+            tts_say("Não ouvi o que disseste")
         case _ :
             tts_say("Não percebi")
-
-
 
 
 
