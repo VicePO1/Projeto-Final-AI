@@ -14,6 +14,7 @@ def janela_inicial():
    shark_art()
    create_titulo()
    create_button_listen(root)
+   create_button_ajuda(root)
 
    root.mainloop()
 
