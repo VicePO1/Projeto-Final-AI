@@ -2,7 +2,8 @@ import tkinter as tk
 
 from Meu_Projeto.GUI.entries import create_entry_screenshot_size
 from Meu_Projeto.GUI.labels import *
-from Meu_Projeto.GUI.buttons import *
+from Meu_Projeto.GUI.buttons import create_button_listen
+from Meu_Projeto.GUI.buttons import create_button_ajuda
 
 
 def janela_inicial():

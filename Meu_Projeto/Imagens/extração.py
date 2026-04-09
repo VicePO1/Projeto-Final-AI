@@ -13,4 +13,3 @@ def ler_imagem(imagem_sub,caminho_tesseract):
     else:
         tts_say("Texto identificado")
         return texto
-

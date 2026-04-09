@@ -1,5 +1,6 @@
 from Meu_Projeto.Voz.tts import tts_say
 import os
+import pyautogui
 
 def kit():
     user=os.getlogin()
@@ -22,3 +23,7 @@ def kit():
         os.startfile(vscode)
     else:
         tts_say("Não foi encontrado o Visual Studio Code")
+
+def open_app(app):
+    pyautogui.hotkey("win")
+    pyautogui.write(app)

@@ -15,10 +15,14 @@ def shark_art():
 
 def label_entry_screenshot_size():
     label_screenshot_size=tk.Label(text="Escreva aqui:",bg="light Blue")
-    label_screenshot_size.place(x=50,y=285)
+    label_screenshot_size.place(x=50,y=275)
 
-def create_label_ler_imagem(texto_imagem):
-    label_ler_imagem=tk.Label(text=texto_imagem,bg="light Blue")
+def create_label_resultado(texto_imagem):
+    global label_resultado
+
+    label_resultado=tk.Label(text=texto_imagem,bg="light Blue")
     if texto_imagem!="":
-       label_ler_imagem.place(x=50,y=280)
+       label_resultado.place(x=50,y=280)
 
+def delete_label_resultado():
+    label_resultado.pack_forget()
