@@ -1,7 +1,5 @@
-#Imports
 import pyttsx3 as tts
 
-#Usa o tts para falar, text é o que vai dizer
 def tts_say(text):
    engine = tts.init()
    voices = engine.getProperty('voices')

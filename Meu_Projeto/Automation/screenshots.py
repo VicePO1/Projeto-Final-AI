@@ -16,18 +16,18 @@ def screenshot_parcial():
 
 def identificar_screenshot_name():
     tts_say("Como se chama este screenshot?")
-    nome_scr=listen()
+    nome_scr = listen()
     print(nome_scr)
     return nome_scr
 
 def identificar_screenshot_size():
     tts_say("Screenshot total ou parcial")
-    t_ou_p=listen()
+    t_ou_p = listen()
     print(t_ou_p)
-    if t_ou_p=="parcial":
+    if t_ou_p =="parcial":
        create_entry_screenshot_size()
        label_entry_screenshot_size()
-    elif t_ou_p=="total":
+    elif t_ou_p =="total":
         screenshot_total()
     else:
         tts_say("Não percebi")
