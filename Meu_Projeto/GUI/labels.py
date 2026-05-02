@@ -25,4 +25,4 @@ def create_label_resultado(texto_imagem):
        label_resultado.place(x=50,y=280)
 
 def delete_label_resultado():
-    label_resultado.pack_forget()
+    label_resultado.config(text="")
