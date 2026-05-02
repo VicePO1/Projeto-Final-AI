@@ -1,10 +1,7 @@
 import pywhatkit
-import cv2
+from Meu_Projeto.Utils.utils import tts_say
 
 def convert_ascii(image):
    art=pywhatkit.image_to_ascii_art(image)
+   tts_say("Texto convertido")
    return art
-
-def monochrome(imageI):
-    imageF=cv2.imread(imageI, 0)
-    return imageF
