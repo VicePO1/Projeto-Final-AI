@@ -3,7 +3,7 @@ import cv2
 from Meu_Projeto.Voz.tts import tts_say
 
 def ler_imagem(imagem_sub,caminho_tesseract):
-    imagem = cv2.imread(imagem_sub)
+    imagem = cv2.imread(imagem_sub,0)
     caminho = caminho_tesseract
     pytesseract.pytesseract.tesseract_cmd = caminho
     texto = pytesseract.image_to_string(imagem)
