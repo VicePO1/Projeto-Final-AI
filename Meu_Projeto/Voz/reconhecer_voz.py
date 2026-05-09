@@ -60,12 +60,7 @@ def identificar_inicial(texto):
 
         case "enviar":
             create_label_resultado(texto)
-            tts_say("Qual é a imagem")
-            try:
-                filename = askopenfilename()
-                tts_say("Enviar a quem")
-            except AttributeError:
-                tts_say("Erro ao ler imagem")
+            criar_janela_mensagem()
 
 
         case "":

@@ -1,16 +1,18 @@
 import tkinter as tk
 import os
+from PIL import ImageTk, Image
+from tkinter.filedialog import askopenfilename
 
 user=os.getlogin()
 with open(fr"Assets/shark.txt", "r") as file:
     sharkart = file.read()
 
-def create_titulo():
-    titulo = tk.Label(text="Assistente Sharkcoders",bg="light Blue",font=("Georgia",18))
+def create_titulo(jan):
+    titulo = tk.Label(jan,text="Assistente Sharkcoders",bg="light Blue",font=("Georgia",18))
     titulo.place(x=85,y=30)
 
-def shark_art():
-    shark_label = tk.Label(text=sharkart,bg="light Blue",font=("Courier",2))
+def shark_art(jan):
+    shark_label = tk.Label(jan,text=sharkart,bg="light Blue",font=("Courier",2))
     shark_label.place(x=275,y=280)
 
 def label_entry_screenshot_size():
@@ -26,3 +28,22 @@ def create_label_resultado(texto_imagem):
 
 def delete_label_resultado():
     label_resultado.config(text="")
+
+def create_label_cont(jan):
+    label_cont = tk.Label(jan,text="Contacto: ",bg="light Blue")
+    label_cont.place(x=50,y=580)
+
+def create_label_cap(jan):
+    label_cap = tk.Label(jan,text="Caption: ",bg="light Blue")
+    label_cap.place(x=500,y=50)
+
+def create_label_imagem(jan):
+    global label_imagem
+    label_imagem = tk.Label(jan,text="Imagem não selecionada",bg="light Blue")
+    label_imagem.place(x=100,y=50)
+
+def change_label_imagem():
+    global img
+    img = ImageTk.PhotoImage(Image.open(askopenfilename()))
+    label_imagem.config(image=img)
+    label_imagem.image = img
