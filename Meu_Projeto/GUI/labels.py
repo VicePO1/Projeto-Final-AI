@@ -3,6 +3,8 @@ import os
 from PIL import ImageTk, Image
 from tkinter.filedialog import askopenfilename
 
+img=None
+
 user=os.getlogin()
 with open(fr"Assets/shark.txt", "r") as file:
     sharkart = file.read()
