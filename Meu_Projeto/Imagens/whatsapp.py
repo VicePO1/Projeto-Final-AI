@@ -5,5 +5,3 @@ def enviar_imagem(cont,image):
 
 def enviar_imagem_caption(cont,image,caption):
     what.sendwhats_image(cont,image,caption)
-
-

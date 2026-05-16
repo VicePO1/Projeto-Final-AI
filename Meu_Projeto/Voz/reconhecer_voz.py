@@ -2,10 +2,11 @@ from tkinter.filedialog import askopenfilename
 from Meu_Projeto.Automation.files_open import *
 from Meu_Projeto.Imagens.extração import ler_imagem
 from Meu_Projeto.Imagens.procesão import convert_ascii
-from Meu_Projeto.Automation.screenshots import identificar_screenshot_size
+from Meu_Projeto.Automation.screenshots import tirar_screenshot
 from Meu_Projeto.Voz.tts import tts_say
 from Meu_Projeto.GUI.labels import create_label_resultado
 from Meu_Projeto.Automation.os_management import *
+from Meu_Projeto.Utils.utils import criar_janela_mensagem
 
 def identificar_inicial(texto):
     match texto:
@@ -17,7 +18,7 @@ def identificar_inicial(texto):
         case "captura":
             create_label_resultado(texto)
             tts_say("A preparar o screenshot")
-            identificar_screenshot_size()
+            tirar_screenshot()
 
         case "ler imagem":
             create_label_resultado(texto)

@@ -1,7 +1,5 @@
 import tkinter as tk
 import os
-from PIL import ImageTk, Image
-from tkinter.filedialog import askopenfilename
 
 user=os.getlogin()
 with open(fr"Assets/shark.txt", "r") as file:
@@ -42,8 +40,6 @@ def create_label_imagem(jan):
     label_imagem = tk.Label(jan,text="Imagem não selecionada",bg="light Blue")
     label_imagem.place(x=100,y=50)
 
-def change_label_imagem():
-    global img
-    img = ImageTk.PhotoImage(Image.open(askopenfilename()))
+def change_label_imagem(img):
     label_imagem.config(image=img)
     label_imagem.image = img

@@ -20,3 +20,11 @@ def create_entry_cap(jan):
     global entry_cap
     entry_cap = tk.Entry(jan,width=20)
     entry_cap.place(x=450,y=100)
+
+def get_entry_cont():
+    cont = entry_cont.get()
+    return cont
+
+def get_entry_cap():
+    cap = entry_cap.get()
+    return cap
