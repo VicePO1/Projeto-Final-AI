@@ -6,7 +6,8 @@ from Meu_Projeto.Automation.screenshots import tirar_screenshot
 from Meu_Projeto.Voz.tts import tts_say
 from Meu_Projeto.GUI.labels import create_label_resultado
 from Meu_Projeto.Automation.os_management import *
-from Meu_Projeto.Utils.utils import criar_janela_mensagem
+from Meu_Projeto.Utils.janela_mensagem import criar_janela_mensagem
+from Meu_Projeto.Utils.listen import listen
 
 def identificar_inicial(texto):
     match texto:

@@ -1,6 +1,6 @@
 from Meu_Projeto.Voz.tts import tts_say
 import pyautogui
-from Meu_Projeto.Utils.utils import listen
+from Meu_Projeto.Utils.listen import listen
 from Meu_Projeto.GUI.entries import *
 from Meu_Projeto.GUI.labels import label_entry_screenshot_size
 #from Meu_Projeto.GUI.buttons import create_button_submit

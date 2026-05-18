@@ -1,24 +1,9 @@
-import speech_recognition as sr
-from speech_recognition import UnknownValueError
-from Meu_Projeto.Voz.tts import tts_say
 import tkinter as tk
 from Meu_Projeto.GUI.labels import *
-from Meu_Projeto.GUI.buttons import *
+from Meu_Projeto.Utils.button_janela_mensagem import create_button_grab_imagem
+from Meu_Projeto.Utils.button_janela_mensagem import create_button_enviar
 from Meu_Projeto.GUI.entries import create_entry_cont
 from Meu_Projeto.GUI.entries import create_entry_cap
-
-def listen():
-    rec = sr.Recognizer()
-    with sr.Microphone() as mic:
-       rec.adjust_for_ambient_noise(mic)
-       tts_say('Fale algo e aguarde ...')
-       audio = rec.listen(mic)
-       try:
-           rec.adjust_for_ambient_noise(mic,duration=1)
-           texto = rec.recognize_google(audio,language="pt-BR")
-       except UnknownValueError:
-           texto=""
-       return texto
 
 def criar_janela_mensagem():
     janela_mensagem = tk.Tk()
