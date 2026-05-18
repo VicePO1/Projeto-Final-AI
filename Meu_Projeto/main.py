@@ -1,4 +1,3 @@
-from Meu_Projeto.GUI.janela import *
+from Meu_Projeto.GUI.janela import janela_inicial
 
-criar_janela_mensagem()
 janela_inicial()

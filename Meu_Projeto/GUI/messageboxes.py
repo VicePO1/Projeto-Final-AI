@@ -6,6 +6,7 @@ def help_messagebox():
              "\nScreenshot - Tira um screenshot total ou parcial"
              "\nLer imagem - mostra o texto dentro de uma imagem"
              "\nLimpeza - Minimiza todas as janelas"
-             "\nAbrir - Abre a aplicação que tu queres")
+             "\nAbrir - Abre a aplicação que tu queres"
+             "\nEnviar - Enviar uma imagem no Whatsapp, pode ter caption")
 
     messagebox.showinfo("Bem-vindo!",texto)
