@@ -8,6 +8,7 @@ from Meu_Projeto.GUI.labels import create_label_resultado
 from Meu_Projeto.Automation.os_management import *
 from Meu_Projeto.Utils.janela_mensagem import criar_janela_mensagem
 from Meu_Projeto.Utils.listen import listen
+from Meu_Projeto.API.github import info_perfil
 
 def identificar_inicial(texto):
     match texto:
@@ -64,6 +65,10 @@ def identificar_inicial(texto):
             create_label_resultado(texto)
             criar_janela_mensagem()
 
+        case "perfil":
+            create_label_resultado(texto)
+            tts_say("A mostrar perfil")
+            create_label_resultado(info_perfil())
 
         case "":
             tts_say("Não ouvi o que disseste")
