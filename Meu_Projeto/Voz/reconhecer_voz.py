@@ -76,16 +76,3 @@ def identificar_inicial(texto):
         case _ :
             create_label_resultado(texto)
             tts_say("Não percebi")
-
-
-
-
-
-
-
-
-
-
-
-
-
