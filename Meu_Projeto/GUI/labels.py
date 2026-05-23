@@ -45,3 +45,4 @@ def create_label_imagem(jan):
 def change_label_imagem(img):
     label_imagem.config(image=img,text="")
     label_imagem.image = img
+

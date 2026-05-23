@@ -3,8 +3,6 @@ import tkinter as tk
 from Meu_Projeto.GUI.labels import *
 from Meu_Projeto.GUI.buttons import *
 
-
-
 def janela_inicial():
    root=tk.Tk()
    root.configure(bg='lightblue')
@@ -15,6 +13,7 @@ def janela_inicial():
    create_titulo(root)
    create_button_listen(root)
    create_button_ajuda(root)
+   create_button_defi(root)
 
    root.mainloop()
 
