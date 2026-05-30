@@ -8,6 +8,7 @@ def help_messagebox():
              "\nLimpeza - Minimiza todas as janelas"
              "\nAbrir - Abre a aplicação que tu queres"
              "\nEnviar - Enviar uma imagem no Whatsapp, pode ter caption"
-             "\nPerfil - Mostra alguma informação da tua conta (pode ser cofigurado pelo botão Definições)")
+             "\nPerfil - Mostra alguma informação da tua conta (pode ser cofigurado pelo botão Definições)"
+             "\nFechar- Fecha o programa")
 
     messagebox.showinfo("Bem-vindo!",texto)

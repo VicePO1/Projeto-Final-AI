@@ -47,7 +47,10 @@ def identificar_inicial(texto):
             create_label_resultado(texto)
             tts_say("Que app queres abrir")
             app=listen()
-            open_app(app)
+            if app!="":
+                open_app(app)
+            else:
+                tts_say("Não ouvi o que disseste")
 
         case "desenhar":
             create_label_resultado(texto)
@@ -69,6 +72,11 @@ def identificar_inicial(texto):
             create_label_resultado(texto)
             tts_say("A mostrar perfil")
             create_label_resultado(info_perfil())
+
+        case "fechar":
+            create_label_resultado(texto)
+            tts_say("Bye-Bye")
+            quit()
 
         case "":
             tts_say("Não ouvi o que disseste")
