@@ -22,7 +22,7 @@ def identificar_inicial(texto):
             tts_say("A preparar o screenshot")
             tirar_screenshot()
 
-        case "ler imagem":
+        case "ler":
             create_label_resultado(texto)
             tts_say("Qual é a imagem")
             try:
@@ -58,7 +58,6 @@ def identificar_inicial(texto):
             try:
                 filename = askopenfilename()
                 art=convert_ascii(filename)
-                create_label_resultado(art)
                 with open(f"{filename}.ascii.txt","w") as file:
                     file.write(art)
             except AttributeError:
