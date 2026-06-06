@@ -4,7 +4,7 @@ from Meu_Projeto.Imagens.extração import ler_imagem
 from Meu_Projeto.Imagens.procesão import convert_ascii
 from Meu_Projeto.Automation.screenshots import tirar_screenshot
 from Meu_Projeto.Voz.tts import tts_say
-from Meu_Projeto.GUI.labels import create_label_resultado, delete_label_resultado
+from Meu_Projeto.GUI.labels import create_label_resultado
 from Meu_Projeto.Automation.os_management import *
 from Meu_Projeto.Utils.janela_mensagem import criar_janela_mensagem
 from Meu_Projeto.Utils.listen import listen
