@@ -13,7 +13,7 @@ from tkinter import messagebox
 def criar_janela_mensagem():
     global janela_mensagem
     janela_mensagem = tk.Toplevel()
-    janela_mensagem.configure(bg='lightblue')
+    janela_mensagem.configure(bg = 'lightblue')
     janela_mensagem.wm_resizable(False, False)
     janela_mensagem.wm_geometry("700x700")
 
@@ -33,9 +33,9 @@ image_selec=None
 image_path=None
 
 def create_button_grab_imagem(jan):
-    button_grab_imagem = tk.Button(jan, width=15, height=3, text="Escolher imagem", font=("Georgia", 12),
-                              command=lambda: get_imagem())
-    button_grab_imagem.place(x=95, y=400)
+    button_grab_imagem = tk.Button(jan, width = 15, height = 3, text = "Escolher imagem", font = ("Georgia", 12),
+                              command = lambda: get_imagem())
+    button_grab_imagem.place(x = 95, y = 400)
 
 def get_imagem():
     global image_selec, image_path
@@ -48,13 +48,13 @@ def _get_image_path():
 
 def create_button_enviar(jan):
     global image_path
-    button_enviar = tk.Button(jan, width=15, height=3, text="Enviar", font=("Georgia", 12),command=lambda: funcao_button_enviar(get_entry_cont(),_get_image_path(),get_entry_cap()))
-    button_enviar.place(x=400, y=500)
+    button_enviar = tk.Button(jan, width = 15, height = 3, text = "Enviar", font = ("Georgia", 12),command = lambda: funcao_button_enviar(get_entry_cont(),_get_image_path(),get_entry_cap()))
+    button_enviar.place(x = 400, y = 500)
 
 
 def funcao_button_enviar(cont,image,caption):
     try:
-        if caption!="":
+        if caption != "":
             enviar_imagem_caption(f"+{cont}",image,caption)
         else:
             enviar_imagem(f"+{cont}",image)

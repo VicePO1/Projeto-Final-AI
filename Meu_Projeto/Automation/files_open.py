@@ -3,7 +3,7 @@ import os
 import pyautogui
 
 def kit():
-    user=os.getlogin()
+    user = os.getlogin()
 
     pycharm = r"C:\ProgramData\Microsoft\Windows\Start Menu\Programs\JetBrains\PyCharm Community Edition 2024.3.1.1.lnk"
     github = fr"C:\Users\{user}\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\GitHub, Inc\GitHub Desktop.lnk"

@@ -10,6 +10,7 @@ def help_messagebox():
              "\nEnviar - Enviar uma imagem no Whatsapp, pode ter caption"
              "\nPerfil - Mostra alguma informação da tua conta (pode ser cofigurado pelo botão Definições)"
              "\nDesenhar - Converter uma imagem em ASCII"
+             "\nMinimizar- Minimiza o programa"
              "\nFechar- Fecha o programa")
 
     messagebox.showinfo("Bem-vindo!",texto)

@@ -4,7 +4,7 @@ from Meu_Projeto.GUI.labels import *
 from Meu_Projeto.GUI.buttons import *
 
 def janela_inicial():
-   root=tk.Tk()
+   root = tk.Tk()
    root.configure(bg='lightblue')
    root.wm_resizable(False, False)
    root.wm_geometry("500x500")

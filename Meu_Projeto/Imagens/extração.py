@@ -7,7 +7,7 @@ def ler_imagem(imagem_sub,caminho_tesseract):
     caminho = caminho_tesseract
     pytesseract.pytesseract.tesseract_cmd = caminho
     texto = pytesseract.image_to_string(imagem)
-    if texto=="":
+    if texto == "":
         tts_say("Não há texto na imagem")
         return texto
     else:

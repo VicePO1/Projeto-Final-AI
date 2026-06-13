@@ -26,7 +26,7 @@ def identificar_inicial(texto):
             create_label_resultado(texto)
             tts_say("Qual é a imagem")
             try:
-                filename=askopenfilename()
+                filename = askopenfilename()
                 tts_say("Onde está o tesseract")
                 tesseract = askopenfilename()  # C:\Program Files\Tesseract-OCR\tesseract
                 create_label_resultado(ler_imagem(filename, tesseract))
@@ -47,7 +47,7 @@ def identificar_inicial(texto):
             create_label_resultado(texto)
             tts_say("Que app queres abrir")
             app=listen()
-            if app!="":
+            if app != "":
                 open_app(app)
             else:
                 tts_say("Não ouvi o que disseste")
@@ -57,7 +57,7 @@ def identificar_inicial(texto):
             tts_say("Qual é a imagem")
             try:
                 filename = askopenfilename()
-                art=convert_ascii(filename)
+                art = convert_ascii(filename)
                 with open(f"{filename}.ascii.txt","w") as file:
                     file.write(art)
             except AttributeError:
