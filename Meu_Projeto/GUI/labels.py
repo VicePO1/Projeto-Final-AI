@@ -2,6 +2,7 @@ import tkinter as tk
 import os
 
 img=None
+label_resultado=None
 
 user = os.getlogin()
 with open(fr"Assets/shark.txt", "r") as file:
@@ -27,7 +28,10 @@ def create_label_resultado(texto_imagem):
        label_resultado.place(x = 30,y = 280)
 
 def delete_label_resultado():
-    label_resultado.config(text = "")
+    global label_resultado
+    while label_resultado!=None:
+        label_resultado.destroy()
+        label_resultado=None
 
 def create_label_cont(jan):
     label_cont = tk.Label(jan,text = "Contacto: ",bg = "light Blue")

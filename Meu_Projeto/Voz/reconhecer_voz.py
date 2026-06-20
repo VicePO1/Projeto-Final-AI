@@ -4,13 +4,14 @@ from Meu_Projeto.Imagens.extração import ler_imagem
 from Meu_Projeto.Imagens.procesão import convert_ascii
 from Meu_Projeto.Automation.screenshots import tirar_screenshot
 from Meu_Projeto.Voz.tts import tts_say
-from Meu_Projeto.GUI.labels import create_label_resultado
+from Meu_Projeto.GUI.labels import create_label_resultado, delete_label_resultado
 from Meu_Projeto.Automation.os_management import *
 from Meu_Projeto.Utils.janela_mensagem import criar_janela_mensagem
 from Meu_Projeto.Utils.listen import listen
 from Meu_Projeto.API.github import info_perfil
 
 def identificar_inicial(texto):
+    delete_label_resultado()
     match texto:
         case "kit":
             create_label_resultado(texto)
@@ -22,13 +23,12 @@ def identificar_inicial(texto):
             tts_say("A preparar o screenshot")
             tirar_screenshot()
 
-        case "ler":
+        case "leitura":
             create_label_resultado(texto)
             tts_say("Qual é a imagem")
             try:
                 filename = askopenfilename()
-                tts_say("Onde está o tesseract")
-                tesseract = askopenfilename()  # C:\Program Files\Tesseract-OCR\tesseract
+                tesseract = r"C:\Program Files\Tesseract-OCR\tesseract"
                 create_label_resultado(ler_imagem(filename, tesseract))
             except AttributeError:
                 tts_say("Erro ao ler imagem")
@@ -68,7 +68,6 @@ def identificar_inicial(texto):
             criar_janela_mensagem()
 
         case "perfil":
-            create_label_resultado(texto)
             tts_say("A mostrar perfil")
             create_label_resultado(info_perfil())
 

@@ -12,8 +12,10 @@ def tirar_screenshot():
 def identificar_screenshot_name():
     tts_say("Como se chama este screenshot?")
     nome_scr = listen()
-    print(nome_scr)
-    return nome_scr
+    if nome_scr!="":
+        return nome_scr
+    else:
+        return "Screenshot"
 
 
 

@@ -1,6 +1,6 @@
 import requests
 
-TOKEN = "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"
+TOKEN = "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"
 HEADERS = {"Authorization": f"token {TOKEN}"}
 
 def info_perfil():

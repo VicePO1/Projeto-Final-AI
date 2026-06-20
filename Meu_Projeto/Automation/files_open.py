@@ -27,3 +27,4 @@ def kit():
 def open_app(app):
     pyautogui.hotkey("win")
     pyautogui.write(app)
+    pyautogui.press("enter")
