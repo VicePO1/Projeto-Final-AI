@@ -1,13 +1,10 @@
 import requests
 
-TOKEN = "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"
-HEADERS = {"Authorization": f"token {TOKEN}"}
-
 def info_perfil():
     with open(fr"Assets/account_github.txt", "r") as file:
         USERNAME = file.read()
 
-    r = requests.get(f"https://api.github.com/users/{USERNAME}", headers=HEADERS)
+    r = requests.get(f"https://api.github.com/users/{USERNAME}")
     if r.status_code==200:
         dados = r.json()
         nome = dados["name"]
